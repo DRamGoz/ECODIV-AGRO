@@ -10,45 +10,45 @@
   
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="pantalla" class="bg-[#838383] h-screen w-screen overflow-hidden flex flex-col items-center justify-between p-6 font-sans transition-colors duration-500 relative select-none">
+<body id="pantalla" class="bg-[#838383] min-h-screen w-full flex flex-col items-center justify-between p-5 font-sans transition-colors duration-500 relative select-none">
 
   <!-- Cabecera: Título y estado -->
-  <header class="text-center w-full max-w-sm mt-4">
-    <p class="text-black/75 font-bold text-xs tracking-widest uppercase">
+  <header class="text-center w-full max-w-[260px] mt-2">
+    <p class="text-black/75 font-bold text-[10px] tracking-widest uppercase">
       ECODIV-AGRO | CONTROL DE RIEGO
     </p>
-    <div id="estado-texto" class="text-white font-black text-3xl mt-3 tracking-wide whitespace-nowrap min-h-[48px] drop-shadow-sm">
+    <div id="estado-texto" class="text-white font-black text-2xl mt-2 tracking-wide whitespace-nowrap min-h-[40px] drop-shadow-sm">
       RIEGO | OFF
     </div>
   </header>
 
-  <!-- Tarjeta de la Planta (Centro adaptable) -->
-  <section class="flex-grow flex items-center justify-center w-full max-w-sm my-4">
-    <div id="tarjeta" class="relative w-full aspect-[4/5] max-h-[38vh] bg-[#b0aeae] rounded-[32px] transition-colors duration-500 overflow-hidden flex items-center justify-center shadow-lg border border-white/10">
+  <!-- Tarjeta de la Planta (Compacta y segura) -->
+  <section class="flex-grow flex items-center justify-center w-full max-w-[260px] my-4">
+    <div id="tarjeta" class="relative w-[240px] h-[280px] bg-[#b0aeae] rounded-[28px] transition-colors duration-500 overflow-hidden flex items-center justify-center shadow-md border border-white/10">
       
       <lottie-player 
         id="planta" 
         src="plant4_v6.json"  
         background="transparent" 
         speed="1" 
-        class="absolute w-[80%] h-[80%] bottom-[5%]"
+        class="absolute w-[200px] h-[200px] bottom-[15px]"
       ></lottie-player>
 
     </div>
   </section>
 
-  <!-- Botones de Control Grandes (Abajo) -->
-  <section class="flex flex-col w-full max-w-sm gap-4 mb-4">
+  <!-- Botones de Control (Tamaño seguro y táctil) -->
+  <section class="flex flex-col w-full max-w-[260px] gap-3 mb-2">
     <button 
       id="btn-on"
-      class="flex gap-3 py-5 w-full bg-[#55f14d] text-white font-black text-base tracking-wider rounded-2xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_8px_20px_rgba(85,241,77,0.3)]"
+      class="flex gap-2.5 py-4 w-full bg-[#55f14d] text-white font-black text-sm tracking-wider rounded-xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_6px_15px_rgba(85,241,77,0.3)]"
     >
       ENCENDER RIEGO
     </button>
     
     <button 
       id="btn-off"
-      class="flex gap-3 py-5 w-full bg-[#f14d4d] text-white font-black text-base tracking-wider rounded-2xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_8px_20px_rgba(241,77,77,0.3)]"
+      class="flex gap-2.5 py-4 w-full bg-[#f14d4d] text-white font-black text-sm tracking-wider rounded-xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_6px_15px_rgba(241,77,77,0.3)]"
     >
       APAGAR RIEGO
     </button>

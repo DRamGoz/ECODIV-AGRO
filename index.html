@@ -10,45 +10,42 @@
   
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="pantalla" class="bg-[#838383] min-h-screen w-full flex flex-col items-center justify-between p-5 font-sans transition-colors duration-500 relative select-none">
+<body id="pantalla" class="bg-[#838383] min-h-screen flex flex-col items-center justify-center font-sans transition-colors duration-500 relative">
 
-  <!-- Cabecera: Título y estado -->
-  <header class="text-center w-full max-w-[260px] mt-2">
-    <p class="text-black/75 font-bold text-[10px] tracking-widest uppercase">
+  <header class="text-center mt-8">
+    <p class="text-black font-bold text-base tracking-wide whitespace-nowrap">
       ECODIV-AGRO | CONTROL DE RIEGO
     </p>
-    <div id="estado-texto" class="text-white font-black text-2xl mt-2 tracking-wide whitespace-nowrap min-h-[40px] drop-shadow-sm">
+    <div id="estado-texto" class="text-white font-bold text-[32px] mt-4 tracking-wide whitespace-nowrap min-h-[48px]">
       RIEGO | OFF
     </div>
   </header>
 
-  <!-- Tarjeta de la Planta (Compacta y segura) -->
-  <section class="flex-grow flex items-center justify-center w-full max-w-[260px] my-4">
-    <div id="tarjeta" class="relative w-[240px] h-[280px] bg-[#b0aeae] rounded-[28px] transition-colors duration-500 overflow-hidden flex items-center justify-center shadow-md border border-white/10">
+  <section class="inline-flex gap-2.5 p-2.5 mt-6 items-center justify-center">
+    <div id="tarjeta" class="relative w-[250px] h-[360px] bg-[#b0aeae] rounded-3xl transition-colors duration-500 overflow-hidden flex items-center justify-center">
       
       <lottie-player 
         id="planta" 
         src="plant4_v6.json"  
         background="transparent" 
         speed="1" 
-        class="absolute w-[200px] h-[200px] bottom-[15px]"
+        class="absolute w-[220px] h-[220px] bottom-[20px]"
       ></lottie-player>
 
     </div>
   </section>
 
-  <!-- Botones de Control (Tamaño seguro y táctil) -->
-  <section class="flex flex-col w-full max-w-[260px] gap-3 mb-2">
+  <section class="flex flex-col w-[220px] gap-6 mt-8 mb-8 items-center justify-center">
     <button 
       id="btn-on"
-      class="flex gap-2.5 py-4 w-full bg-[#55f14d] text-white font-black text-sm tracking-wider rounded-xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_6px_15px_rgba(85,241,77,0.3)]"
+      class="flex gap-2.5 px-6 py-4 w-full bg-[#55f14d] text-white font-bold text-xs rounded-lg items-center justify-center transition-all duration-150 hover:opacity-95 active:scale-95 shadow-md"
     >
       ENCENDER RIEGO
     </button>
     
     <button 
       id="btn-off"
-      class="flex gap-2.5 py-4 w-full bg-[#f14d4d] text-white font-black text-sm tracking-wider rounded-xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_6px_15px_rgba(241,77,77,0.3)]"
+      class="flex gap-2.5 px-6 py-4 w-full bg-[#f14d4d] text-white font-bold text-xs rounded-lg items-center justify-center transition-all duration-150 hover:opacity-95 active:scale-95 shadow-md"
     >
       APAGAR RIEGO
     </button>

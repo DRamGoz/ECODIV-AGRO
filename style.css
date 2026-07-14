@@ -1,0 +1,11 @@
+/* Estilos personalizados para tu proyecto */
+
+#tarjeta {
+  /* Asegura que la sombra de la tarjeta de la planta sea suave */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+#planta {
+  /* Evita que el reproductor Lottie interfiera con los clics en la tarjeta */
+  pointer-events: none; 
+}

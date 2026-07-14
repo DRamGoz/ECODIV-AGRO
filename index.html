@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECODIV-AGRO | Control de Riego</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="pantalla" class="bg-[#838383] min-h-screen flex flex-col items-center justify-center font-sans transition-colors duration-500 relative">
+
+  <header class="text-center mt-8">
+    <p class="text-black font-bold text-base tracking-wide whitespace-nowrap">
+      ECODIV-AGRO | CONTROL DE RIEGO
+    </p>
+    <div id="estado-texto" class="text-white font-bold text-[32px] mt-4 tracking-wide whitespace-nowrap min-h-[48px]">
+      RIEGO | OFF
+    </div>
+  </header>
+
+  <section class="inline-flex gap-2.5 p-2.5 mt-6 items-center justify-center">
+    <div id="tarjeta" class="relative w-[250px] h-[360px] bg-[#b0aeae] rounded-3xl transition-colors duration-500 overflow-hidden flex items-center justify-center">
+      
+      <lottie-player 
+        id="planta" 
+        src="plant4_v6.json"  
+        background="transparent" 
+        speed="1" 
+        class="absolute w-[220px] h-[220px] bottom-[20px]"
+      ></lottie-player>
+
+    </div>
+  </section>
+
+  <section class="flex flex-col w-[220px] gap-6 mt-8 mb-8 items-center justify-center">
+    <button 
+      id="btn-on"
+      class="flex gap-2.5 px-6 py-4 w-full bg-[#55f14d] text-white font-bold text-xs rounded-lg items-center justify-center transition-all duration-150 hover:opacity-95 active:scale-95 shadow-md"
+    >
+      ENCENDER RIEGO
+    </button>
+    
+    <button 
+      id="btn-off"
+      class="flex gap-2.5 px-6 py-4 w-full bg-[#f14d4d] text-white font-bold text-xs rounded-lg items-center justify-center transition-all duration-150 hover:opacity-95 active:scale-95 shadow-md"
+    >
+      APAGAR RIEGO
+    </button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

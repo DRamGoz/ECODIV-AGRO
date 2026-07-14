@@ -2,59 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>ECODIV-AGRO | Control de Riego</title>
   
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="pantalla" class="bg-[#838383] min-h-screen flex flex-col items-center justify-center p-4 font-sans transition-colors duration-500 relative select-none">
+<body id="pantalla">
 
-  <!-- Contenedor unificado: mantiene todo agrupado en el centro -->
-  <div class="flex flex-col items-center justify-center w-full max-w-[360px] px-4 gap-6">
+  <div class="contenedor">
 
-    <!-- Cabecera -->
-    <header class="text-center w-full">
-      <p class="text-black/75 font-bold text-xs tracking-widest uppercase">
-        ECODIV-AGRO | CONTROL DE RIEGO v2.0
-      </p>
-      <div id="estado-texto" class="text-white font-black text-3xl mt-2 tracking-wide whitespace-nowrap min-h-[40px] drop-shadow-sm">
-        RIEGO | OFF
-      </div>
+    <!-- Cabecera: Título y estado -->
+    <header class="cabecera">
+      <p>ECODIV-AGRO | CONTROL DE RIEGO v2.1</p>
+      <div id="estado-texto">RIEGO | OFF</div>
     </header>
 
     <!-- Tarjeta de la Planta -->
-    <section class="w-full">
-      <div id="tarjeta" class="relative w-full aspect-[4/5] bg-[#b0aeae] rounded-[28px] transition-colors duration-500 overflow-hidden flex items-center justify-center shadow-md border border-white/10">
-        
+    <section class="tarjeta-wrapper">
+      <div id="tarjeta">
         <lottie-player 
           id="planta" 
           src="plant4_v6.json"  
           background="transparent" 
-          speed="1" 
-          class="absolute w-[80%] h-[80%] bottom-[5%]"
+          speed="1"
         ></lottie-player>
-
       </div>
     </section>
 
-    <!-- Botones de Control (Cómodos y táctiles) -->
-    <section class="flex flex-col w-full gap-4">
-      <button 
-        id="btn-on"
-        class="flex gap-2.5 py-4 w-full bg-[#55f14d] text-white font-black text-base tracking-wider rounded-xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_6px_15px_rgba(85,241,77,0.3)]"
-      >
-        ENCENDER RIEGO
-      </button>
-      
-      <button 
-        id="btn-off"
-        class="flex gap-2.5 py-4 w-full bg-[#f14d4d] text-white font-black text-base tracking-wider rounded-xl items-center justify-center transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] shadow-[0_6px_15px_rgba(241,77,77,0.3)]"
-      >
-        APAGAR RIEGO
-      </button>
+    <!-- Botones de Control -->
+    <section class="botones-wrapper">
+      <button id="btn-on">ENCENDER RIEGO</button>
+      <button id="btn-off">APAGAR RIEGO</button>
     </section>
 
   </div>

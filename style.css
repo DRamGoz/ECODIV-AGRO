@@ -1,11 +1,130 @@
-/* Estilos personalizados para tu proyecto */
+/* Reset y Configuración Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #838383;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Contenedor Principal */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 350px;
+  gap: 24px;
+}
+
+/* Cabecera */
+.cabecera {
+  text-align: center;
+  width: 100%;
+}
+
+.cabecera p {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+#estado-texto {
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+  margin-top: 10px;
+  letter-spacing: 0.05em;
+  min-height: 40px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Tarjeta de la Planta */
+.tarjeta-wrapper {
+  width: 100%;
+}
 
 #tarjeta {
-  /* Asegura que la sombra de la tarjeta de la planta sea suave */
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: #b0aeae;
+  border-radius: 28px;
+  transition: background-color 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #planta {
-  /* Evita que el reproductor Lottie interfiera con los clics en la tarjeta */
-  pointer-events: none; 
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  bottom: 5%;
+  pointer-events: none;
+}
+
+/* Contenedor de Botones */
+.botones-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+/* Botones */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 24px;
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+#btn-on {
+  background-color: #55f14d;
+  box-shadow: 0 6px 15px rgba(85, 241, 77, 0.35);
+}
+
+#btn-on:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(85, 241, 77, 0.2);
+}
+
+#btn-off {
+  background-color: #f14d4d;
+  box-shadow: 0 6px 15px rgba(241, 77, 77, 0.35);
+}
+
+#btn-off:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(241, 77, 77, 0.2);
 }
